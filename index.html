@@ -6,7 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/mystyle.css">
+
+
+
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -34,11 +39,64 @@
                     <li><a class="main-header-menu-link" href="#contact.html">Contacts</a>
                     </li>
                 </ul>
+
             </nav>
             <address class="address">
                 <a class="address-list-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                 <a class="address-list-tel" href="tel:+11(000)111-111-11">+11(000)111-111-11</a>
             </address>
+            <button class="mobile-nav-button js-open-menu">
+                <svg>
+                    <use href="./images/svg/icons.svg#menu"></use>
+                </svg>
+            </button>
+
+            <nav class="mobile-nav js-menu-container ">
+                <ul class="mobile-nav-menu">
+                    <li class="mobile-nav-menu-item"><a href="index.html">Studio</a></li>
+                    <li class="mobile-nav-menu-item"><a href="portfolio.html">portfolio</a></li>
+                    <li class="mobile-nav-menu-item"><a href="/contact.html">Contact</a></li>
+                </ul>
+                <ul class="mobile-nav-info">
+                    <li class="mobile-nav-info-item"><a href="tel:11(000)111-111-11">+11(000)111-111-11</a></li>
+                    <li class="mobile-nav-info-item2"><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+                <ul class="mobile-list-icons">
+                    <li class="mobile-item-icon">
+                        <a href="" class="mobile-link-icon">
+                            <svg class="mobile-icon" width="16" height="16">
+                                <use href="./images/svg/icons.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-item-icon">
+                        <a href="" class="mobile-link-icon">
+                            <svg class="mobile-icon" width="16" height="16">
+                                <use href="./images/svg/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-item-icon">
+                        <a href="" class="mobile-link-icon">
+                            <svg class="mobile-icon" width="16" height="16">
+                                <use href="./images/svg/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-item-icon">
+                        <a href="" class="mobile-link-icon">
+                            <svg class="mobile-icon" width="16" height="16">
+                                <use href="./images/svg/icons.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <button class="mobile-nav-close js-close-menu">
+                    <svg width="8" height="8">
+                        <use href="./images/svg/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </nav>
         </div>
     </header>
     <main class="main">
@@ -48,8 +106,8 @@
                 <button class="button-order-service" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
-        <section class="section">
-            <div class="container">
+        <section class="our-aproach section">
+            <div class="container-about">
                 <ul class="content-about">
                     <h2 id="" hidden>Features</h2>
 
@@ -128,7 +186,15 @@
                 <h2 class="section-title">Our Teams</h2>
                 <ul class="teams-list">
                     <li class="team-list-images">
-                        <img src=" images/team-card1.jpg" alt="Mark Guerrero Image" width="280">
+
+                        <picture>
+                            <source srcset="images/team/team-1-desktop.jpg" media="(min-width: 1200px)">
+                            <source srcset="images/team/team-1-tablet.jpg" media="(min-width: 768px)">
+                            <img class="our-team-img" src="images/team/team-1-mobile.jpg" alt="Mark Guerrero Image"
+                                width="270px">
+                        </picture>
+
+
                         <div class="team-content">
                             <h3 class="team-name">Mark Guerrero</h3>
                             <p class="team-position">Product Designer
@@ -289,7 +355,7 @@
 
         </section>
         <section class="section">
-            <div class="container">
+            <div class="container customer-container">
                 <h2 class="customers">Customers</h2>
                 <ul class="customers-list">
                     <li class="customer-item">
@@ -329,7 +395,7 @@
         </section>
     </main>
     <footer class="footer" id="contact.html">
-        <div class="container footer-container">
+        <div class=" footer-container">
             <div class="footer-logo-text">
                 <div class="footer-logo">
                     <a href="index.html" class="web">WEB<span class="cloud">STUDIO</span></a>
@@ -342,7 +408,6 @@
 
             <ul class="footer-list">
 
-                </li>
 
                 <li class="footer-list-item">
                     <h3>
@@ -456,14 +521,7 @@
                         </svg>
                         I accept the terms and conditions of the <a href="#">Privacy Policy</a>
                     </label>
-
-
-
-
-                </label>
-
-
-                <button class="modal-submit" type="submit">Send</button>
+                    <button class="modal-submit" type="submit">Send</button>
 
             </form>
 
@@ -471,6 +529,7 @@
     </div>
 
     <script src="./css/js/modal.js"></script>
+    <script src="./css/js/mobile-menu.js"></script>
 </body>
 
 </html>
